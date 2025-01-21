@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/MLFlow%20with%20AWS%20Cloud/mlruns/0/235ce572755049c887bb589efb566c8d/artifacts
+end_time: 1737457485433
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 235ce572755049c887bb589efb566c8d
+run_name: mercurial-stork-640
+run_uuid: 235ce572755049c887bb589efb566c8d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1737457485343
+status: 4
+tags: []
+user_id: ASUS
