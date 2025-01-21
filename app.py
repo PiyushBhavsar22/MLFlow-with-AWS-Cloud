@@ -10,6 +10,8 @@ from mlflow.models.signature import infer_signature
 import mlflow.sklearn
 
 import logging
+import os
+os.environ["MLFLOW_TRACKING_URI"]="http://ec2-3-87-0-163.compute-1.amazonaws.com:5000/"
 logging.basicConfig(level=logging.WARN)
 logger = logging.getLogger(__name__)
 
@@ -63,11 +65,12 @@ if __name__=="__main__":
         ## For the remote server AWS 
         ## Creating a setup
         
-        remote_server_uri=""
+        remote_server_uri="http://ec2-3-87-0-163.compute-1.amazonaws.com:5000/"
         mlflow.set_tracking_uri(remote_server_uri)
         tracking_url_type_store=urlparse(mlflow.get_tracking_uri()).scheme
+
         if tracking_url_type_store!="file":
-            mlflow.sklearn.load_model(
+            mlflow.sklearn.log_model(
                 lr,"model",registered_model_name="ElasticnetWineModel"
             )
         else:
